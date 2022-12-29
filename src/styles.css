@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+:root {
+  --ff-primary: 'Nunito Sans', sans-serif;
+
+  --fw-regular: 300;
+  --fw-semi-bold: 600;
+  --fw-bold: 800;
+}
+
+/* css reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+body {
+  line-height: 1.5;
+}
+
+h1, h2 {
+  line-height: 1;
+}
+
+img, picture, svg, video, canvas {
+  display: block;
+  max-width: 100%;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* general styling */
+body {
+  font-family: var(--ff-primary);
+  font-size: 0.875rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-text);
+}
+
+a:active {
+  color: var(--clr-text);
+}
+
+/* app container styling */
+.app-container {
+  --clr-element: hsl(0, 0%, 100%);
+  --clr-text: hsl(200, 15%, 8%);
+  --clr-background: hsl(0, 0%, 98%);
+}
+
+.app-container {
+  min-height: 100vh;
+  background-color: var(--clr-background);
+}
+
+/* header styling */
+header {
+  padding: 2rem 0;
+  background-color: var(--clr-element);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  position: relative;
+  z-index: 1;
+}
+
+header .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90rem;
+  margin-inline: auto;
+  padding: 0 2rem;
+}
+
+header a {
+  font-size: 1.625rem;
+  font-weight: var(--fw-bold);
+  color: var(--clr-text);
+}
+
+header a:active {
+  color: var(--clr-text);
+}
+
+header .dark-mode-button {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+header .dark-mode-button>img {
+  height: 1rem;
+}
+
+header button {
+  background: transparent;
+  border: none;
+  font-weight: var(--fw-semi-bold);
+  color: var(--clr-text);
+}
+
+header button:hover {
+  cursor: pointer;
+}
+
+/* home styling */
+main {
+  background-color: var(--clr-background);
+  color: var(--clr-text);
+}
+
+.home-container {
+  max-width: 90rem;
+  margin-inline: auto;
+  padding: 2rem;
+}
+
+.home-container .controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-box {
+  margin-bottom: 2rem;
+}
+
+.search-box>label {
+  margin: 1rem;
+  position: relative;
+}
+
+.search-box>label>img {
+  height: 1rem;
+  position: absolute;
+  top: .125rem;
+  left: .5rem;
+}
+
+.search-box>label>input {
+  border: none;
+  padding: 0.5rem 2rem;
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: var(--clr-element);
+  color: var(--clr-text);
+  font-weight: var(--fw-semi-bold);
+}
+
+.search-box>label>input:focus {
+  border: none;
+}
+
+.filter>select {
+  padding: 0.5rem 2rem;
+  border-radius: 8px;
+  font-weight: var(--fw-semi-bold);
+  background-color: var(--clr-element);
+  color: var(--clr-text);
+  border: none;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+/* country card styling */
+.country-card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 4rem;
+}
+
+.country-card {
+  background-color: var(--clr-element);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  cursor: pointer;
+  transition: transform .25s, box-shadow .25s;
+}
+
+.country-card:hover {
+  transform: scale(1.1);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.country-card .country-details-summary {
+  padding: 2rem 1.5rem;
+}
+
+.country-name {
+  font-size:1.2rem;
+  font-weight: var(--fw-bold);
+  margin-bottom: 1.5rem;
+}
+
+.country-detail-title {
+  font-weight: var(--fw-bold);
+}
+
+/* country details styling */
+.country-details-container {
+  max-width: 90rem;
+  margin-inline: auto;
+  padding: 2rem;
+}
+
+.country-details-container .primary-button {
+  background-color: var(--clr-element);
+  color: var(--clr-text);
+  padding: .5rem 2rem;
+  
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.country-details-container .primary-button.back {
+  margin: 3rem 0;
+}
+
+.country-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  font-size: 1rem;
+}
+
+.country-details>img {
+  margin: 2rem 0;
+}
+
+.country-details-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.country-details-text .country-name {
+  font-size: 2rem;
+}
+
+.country-details-text .left-and-right-details {
+  display: flex;
+  justify-content: space-between;
+  line-height: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.country-details-text .border-countries {
+  display: flex;
+  gap: 1rem;
+}
+
+.country-details-text .border-countries>span {
+  flex-shrink: 0;
+}
+
+.country-details-text .border-countries .border-countries-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* dark-mode styling */
+.app-container.dark-mode {
+  --clr-element: hsl(209, 23%, 22%);
+  --clr-text: hsl(0, 0%, 100%);
+  --clr-background: hsl(207, 26%, 17%);
+}
