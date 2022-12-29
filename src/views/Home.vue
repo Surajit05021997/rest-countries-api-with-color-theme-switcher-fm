@@ -9,7 +9,7 @@
         </label>
       </div>
       <div class="filter">
-        <select name="filter" id="filter" v-model="regionSelected">
+        <select name="filter" id="filter" v-model="regionSelected" aria-label="Filter by region">
           <option value="" disabled>Filter by region</option>
           <option v-for="country in getCountryList" :key="country" :value="country">{{ country }}</option>
         </select>
